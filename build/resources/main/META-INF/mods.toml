@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+issueTrackerURL=""
+
+[[mods]]
+modId="stacktonearbychests"
+version="${file.jarVersion}"
+displayName="Stack to Nearby Chests"
+description='''
+Client-side mod that stacks items to nearby chests.
+'''
+
+# Client-only declarations (no server requirements)
+displayURL=""
+authors="dtbcds"
+
+# Dependencies
+[[dependencies.stacktonearbychests]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.stacktonearbychests]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.stacktonearbychests]]
+modId="cloth_config"
+mandatory=true
+versionRange="[11.1.118,)"
+ordering="NONE"
+side="CLIENT"
