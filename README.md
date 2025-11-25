@@ -1,4 +1,4 @@
-# Stack to Nearby Chests (Unofficial Forge Port)
+# Stack to Nearby Chests (Unofficial Forge Port) (ClientSide ONLY)
 **This is an unofficial Forge port of the [original Fabric mod](https://github.com/xiaocihua/stack-to-nearby-chests) by xiaocihua.**
 ## License  
 This port is released under the GNU Lesser General Public License v3.0; see the [LICENSE](LICENSE) file for the full text.
