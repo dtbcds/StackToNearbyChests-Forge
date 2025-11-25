@@ -44,13 +44,13 @@ public class StackToNearbyChests {
     public static final boolean IS_EASY_SHULKER_BOXES_MOD_LOADED = ModList.get().isLoaded("easyshulkerboxes");
     public static final boolean IS_METAL_BUNDLES_MOD_LOADED = ModList.get().isLoaded("metalbundles");
 
-    private static final ResourceLocation BUTTON_TEXTURE = new ResourceLocation(ModOptions.MOD_ID,
+    private static final ResourceLocation BUTTON_TEXTURE = ResourceLocation.fromNamespaceAndPath(ModOptions.MOD_ID,
             "textures/buttons.png");
 
     public static Optional<PosUpdatableButtonWidget> currentStackToNearbyContainersButton = Optional.empty();
 
-    public StackToNearbyChests() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onInitializeClient);
+    public StackToNearbyChests(FMLJavaModLoadingContext context) {
+        context.getModEventBus().addListener(this::onInitializeClient);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

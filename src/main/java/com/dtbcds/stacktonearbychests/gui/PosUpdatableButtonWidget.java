@@ -98,7 +98,7 @@ public class PosUpdatableButtonWidget extends Button {
         private int u = 0;
         private int v = 0;
         private int hoveredVOffset = 16;
-        private ResourceLocation texture = new ResourceLocation("minecraft", "missing");
+        private ResourceLocation texture = ResourceLocation.fromNamespaceAndPath("minecraft", "missing");
         private int textureWidth = 16;
         private int textureHeight = 16;
         private OnPress pressAction = button -> {

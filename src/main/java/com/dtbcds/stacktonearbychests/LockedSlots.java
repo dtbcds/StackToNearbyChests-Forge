@@ -46,10 +46,10 @@ import static java.util.function.Predicate.not;
 public class LockedSlots {
     private static final Path LOCKED_SLOTS_FOLDER = ModOptions.MOD_OPTIONS_DIR.resolve("locked-slots");
     public static final List<ResourceLocation> FAVORITE_ITEM_TAGS = List.of(
-            new ResourceLocation(ModOptions.MOD_ID, "gold_badge"),
-            new ResourceLocation(ModOptions.MOD_ID, "red_background"),
-            new ResourceLocation(ModOptions.MOD_ID, "gold_border"),
-            new ResourceLocation(ModOptions.MOD_ID, "iron_border"));
+            ResourceLocation.fromNamespaceAndPath(ModOptions.MOD_ID, "gold_badge"),
+            ResourceLocation.fromNamespaceAndPath(ModOptions.MOD_ID, "red_background"),
+            ResourceLocation.fromNamespaceAndPath(ModOptions.MOD_ID, "gold_border"),
+            ResourceLocation.fromNamespaceAndPath(ModOptions.MOD_ID, "iron_border"));
 
     private static HashSet<Integer> currentLockedSlots = new HashSet<>();
     private static boolean movingFavoriteItemStack = false;
@@ -439,7 +439,7 @@ public class LockedSlots {
         if (isLocked(slot)) {
             TextureAtlasSprite sprite = Minecraft.getInstance()
                     .getTextureAtlas(InventoryMenu.BLOCK_ATLAS)
-                    .apply(new ResourceLocation(id.getNamespace(), "item/" + id.getPath()));
+                    .apply(ResourceLocation.fromNamespaceAndPath(id.getNamespace(), "item/" + id.getPath()));
             RenderSystem.setShaderTexture(0, sprite.atlasLocation());
             if (isForeground && id.getPath().equals("gold_badge")) {
                 context.blit(xOffset + slot.x, yOffset + slot.y, 400, 16, 16, sprite);

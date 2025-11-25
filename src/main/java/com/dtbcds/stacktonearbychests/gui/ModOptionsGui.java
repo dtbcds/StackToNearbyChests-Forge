@@ -90,14 +90,14 @@ public class ModOptionsGui {
                 appearance.addEntry(entryBuilder
                                 .startSelector(Component.translatable("stacktonearbychests.options.favoriteItemStyle"),
                                                 List.of(
-                                                                new ResourceLocation(ModOptions.MOD_ID, "gold_badge"),
-                                                                new ResourceLocation(ModOptions.MOD_ID,
+                                                                ResourceLocation.fromNamespaceAndPath(ModOptions.MOD_ID, "gold_badge"),
+                                                                ResourceLocation.fromNamespaceAndPath(ModOptions.MOD_ID,
                                                                                 "red_background"),
-                                                                new ResourceLocation(ModOptions.MOD_ID, "gold_border"),
-                                                                new ResourceLocation(ModOptions.MOD_ID, "iron_border"))
+                                                                ResourceLocation.fromNamespaceAndPath(ModOptions.MOD_ID, "gold_border"),
+                                                                ResourceLocation.fromNamespaceAndPath(ModOptions.MOD_ID, "iron_border"))
                                                                 .toArray(new ResourceLocation[0]),
                                                 options.appearance.favoriteItemStyle)
-                                .setDefaultValue(new ResourceLocation(ModOptions.MOD_ID, "gold_badge"))
+                                .setDefaultValue(ResourceLocation.fromNamespaceAndPath(ModOptions.MOD_ID, "gold_badge"))
                                 .setNameProvider(id -> Component.literal(id.getPath().replace("_", " ")))
                                 .setSaveConsumer(newValue -> options.appearance.favoriteItemStyle = newValue)
                                 .build());

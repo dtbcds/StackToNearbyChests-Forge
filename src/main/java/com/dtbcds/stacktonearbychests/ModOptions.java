@@ -93,7 +93,7 @@ public class ModOptions {
         public IntOption restockButtonPosX = new IntOption(6);
         public IntOption restockButtonPosY = new IntOption(10);
 
-        public ResourceLocation favoriteItemStyle = new ResourceLocation(ModOptions.MOD_ID, "gold_badge");
+        public ResourceLocation favoriteItemStyle = ResourceLocation.fromNamespaceAndPath(ModOptions.MOD_ID, "gold_badge");
 
         public MutableBoolean alwaysShowMarkersForFavoritedItems = new MutableBoolean(true);
 
@@ -800,7 +800,7 @@ public class ModOptions {
 
         @Override
         public ResourceLocation read(JsonReader in) throws IOException {
-            return new ResourceLocation(in.nextString());
+            return ResourceLocation.parse(in.nextString());
         }
 
         @Override

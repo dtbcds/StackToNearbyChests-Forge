@@ -132,7 +132,7 @@ public final class KeySequence {
         }
 
         for (int i = 0; i < keys.size() - 1; i++) {
-            if (!PRESSING_KEYS.contains(keys.get(i))) {
+            if (!PRESSING_KEYS.contains(keys.get(i).intValue())) {
                 return false;
             }
         }

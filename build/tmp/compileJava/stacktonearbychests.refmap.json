@@ -12,12 +12,15 @@
     "com/dtbcds/stacktonearbychests/mixin/ClientPlayerEntityMixin": {
       "drop": "Lnet/minecraft/client/player/LocalPlayer;m_108700_(Z)Z"
     },
-    "com/dtbcds/stacktonearbychests/mixin/MinecraftClientMixin": {
-      "handleKeybinds": "Lnet/minecraft/client/Minecraft;m_91279_()V"
-    },
     "com/dtbcds/stacktonearbychests/mixin/ClientPlayerInteractionManagerMixin": {
       "setLocalMode": "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;m_171805_(Lnet/minecraft/world/level/GameType;Lnet/minecraft/world/level/GameType;)V",
       "handleInventoryMouseClick": "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;m_171799_(IIILnet/minecraft/world/inventory/ClickType;Lnet/minecraft/world/entity/player/Player;)V"
+    },
+    "com/dtbcds/stacktonearbychests/mixin/MinecraftClientMixin": {
+      "handleKeybinds": "Lnet/minecraft/client/Minecraft;m_91279_()V"
+    },
+    "com/dtbcds/stacktonearbychests/mixin/CreativeModeInventoryScreenAccessor": {
+      "selectedTab": "f_98507_:Lnet/minecraft/world/item/CreativeModeTab;"
     },
     "com/dtbcds/stacktonearbychests/mixin/HandledScreenAccessor": {
       "leftPos": "f_97735_:I",
@@ -26,9 +29,6 @@
       "findSlot": "m_97744_(DD)Lnet/minecraft/world/inventory/Slot;",
       "topPos": "f_97736_:I",
       "imageHeight": "f_97727_:I"
-    },
-    "com/dtbcds/stacktonearbychests/mixin/CreativeModeInventoryScreenAccessor": {
-      "selectedTab": "f_98507_:Lnet/minecraft/world/item/CreativeModeTab;"
     },
     "com/dtbcds/stacktonearbychests/mixin/HorseInventoryScreenAccessor": {
       "horse": "f_98812_:Lnet/minecraft/world/entity/animal/horse/AbstractHorse;"
@@ -48,12 +48,15 @@
       "com/dtbcds/stacktonearbychests/mixin/ClientPlayerEntityMixin": {
         "drop": "Lnet/minecraft/client/player/LocalPlayer;m_108700_(Z)Z"
       },
-      "com/dtbcds/stacktonearbychests/mixin/MinecraftClientMixin": {
-        "handleKeybinds": "Lnet/minecraft/client/Minecraft;m_91279_()V"
-      },
       "com/dtbcds/stacktonearbychests/mixin/ClientPlayerInteractionManagerMixin": {
         "setLocalMode": "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;m_171805_(Lnet/minecraft/world/level/GameType;Lnet/minecraft/world/level/GameType;)V",
         "handleInventoryMouseClick": "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;m_171799_(IIILnet/minecraft/world/inventory/ClickType;Lnet/minecraft/world/entity/player/Player;)V"
+      },
+      "com/dtbcds/stacktonearbychests/mixin/MinecraftClientMixin": {
+        "handleKeybinds": "Lnet/minecraft/client/Minecraft;m_91279_()V"
+      },
+      "com/dtbcds/stacktonearbychests/mixin/CreativeModeInventoryScreenAccessor": {
+        "selectedTab": "f_98507_:Lnet/minecraft/world/item/CreativeModeTab;"
       },
       "com/dtbcds/stacktonearbychests/mixin/HandledScreenAccessor": {
         "leftPos": "f_97735_:I",
@@ -62,9 +65,6 @@
         "findSlot": "m_97744_(DD)Lnet/minecraft/world/inventory/Slot;",
         "topPos": "f_97736_:I",
         "imageHeight": "f_97727_:I"
-      },
-      "com/dtbcds/stacktonearbychests/mixin/CreativeModeInventoryScreenAccessor": {
-        "selectedTab": "f_98507_:Lnet/minecraft/world/item/CreativeModeTab;"
       },
       "com/dtbcds/stacktonearbychests/mixin/HorseInventoryScreenAccessor": {
         "horse": "f_98812_:Lnet/minecraft/world/entity/animal/horse/AbstractHorse;"

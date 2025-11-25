@@ -1,19 +1,21 @@
 modLoader="javafml"
 loaderVersion="[47,)"
-license="MIT"
-issueTrackerURL=""
+license="LGPL-3.0"
+issueTrackerURL="https://github.com/xiaocihua/stack-to-nearby-chests/issues"
 
 [[mods]]
 modId="stacktonearbychests"
 version="${file.jarVersion}"
-displayName="Stack to Nearby Chests"
+displayName="Stack to Nearby Chests (Unofficial Forge Port)"
 description='''
-Client-side mod that stacks items to nearby chests.
+Unofficial Forge port of the Fabric mod Stack to Nearby Chests by xiaocihua.
+A client-side ONLY mod that adds quick stacking and restocking features from Terraria into Minecraft.
+Original Fabric mod: https://github.com/xiaocihua/stack-to-nearby-chests
 '''
 
 # Client-only declarations (no server requirements)
-displayURL=""
-authors="dtbcds"
+displayURL="https://github.com/xiaocihua/stack-to-nearby-chests"
+authors="xiaocihua (original), Forge port by dtbcds"
 
 # Dependencies
 [[dependencies.stacktonearbychests]]
