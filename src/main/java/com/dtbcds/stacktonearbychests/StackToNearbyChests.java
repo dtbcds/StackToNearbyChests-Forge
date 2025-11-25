@@ -286,8 +286,16 @@ public class StackToNearbyChests {
     }
 
     private static void addWidgetToScreen(Screen screen, GuiEventListener widget) {
+        // addRenderableWidget is protected, so we need reflection
+        // Try deobfuscated name first, then fall back to obfuscated name
         try {
-            var method = Screen.class.getDeclaredMethod("m_142416_", GuiEventListener.class);
+            java.lang.reflect.Method method;
+            try {
+                method = Screen.class.getDeclaredMethod("addRenderableWidget", GuiEventListener.class);
+            } catch (NoSuchMethodException e) {
+                // Fall back to obfuscated name in case we're in a different environment
+                method = Screen.class.getDeclaredMethod("m_142416_", GuiEventListener.class);
+            }
             method.setAccessible(true);
             method.invoke(screen, widget);
         } catch (Exception ex) {
